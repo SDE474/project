@@ -1,1 +1,73 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- Header Section -->
+    <header class="bg-blue-500 text-white py-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Career Opportunities</h1>
+            <p class="text-lg">Explore job openings and share your resume with us</p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto my-8 p-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Job Openings Section -->
+            <section class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">Current Job Openings</h2>
+                <ul class="space-y-4">
+                    <li class="border-b pb-4">
+                        <h3 class="text-xl font-bold">Prof for English</h3>
+                        <p class="text-gray-600">Location: Pune | Experience: 2-4 years</p>
+                        <button class="mt-2 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Apply Now</button>
+                    </li>
+                    <li class="border-b pb-4">
+                        <h3 class="text-xl font-bold"></h3>
+                        <p class="text-gray-600">Location: New York | Experience: 1-3 years</p>
+                        <button class="mt-2 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Apply Now</button>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold">UI/UX Designer</h3>
+                        <p class="text-gray-600">Location: San Francisco | Experience: 3-5 years</p>
+                        <button class="mt-2 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Apply Now</button>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Resume Submission Section -->
+            <section class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">Share Your Resume</h2>
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-medium">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded px-4 py-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-medium">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-4 py-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="resume" class="block text-gray-700 font-medium">Upload Resume</label>
+                        <input type="file" id="resume" name="resume" required class="w-full border border-gray-300 rounded px-4 py-2">
+                    </div>
+                    <button type="submit" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Submit</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 [Your College Name]. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
