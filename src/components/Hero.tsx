@@ -1,5 +1,14 @@
 import React from 'react';
 import { ArrowRight, BookOpen, Award, Globe } from 'lucide-react';
+function NavLink({ href, text }: { href: string; text: string }) {
+  return (
+    <a href={href} className="text-gray-700 hover:text-[#9E1B32] transition-colors font-medium">
+      {text}
+    </a>
+  );
+}
+
+
 
 export default function Hero() {
   return (
@@ -33,8 +42,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
-{/* Navigation Links - Now after hero content */}
-<div className="bg-white border-t border-gray-200">
+      {/* Navigation Links - Now after hero content */}
+      <div className="bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="hidden lg:flex justify-center py-4">
             <div className="flex space-x-8">
@@ -70,9 +79,9 @@ export default function Hero() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-serif text-gray-900 mb-6">Welcome to PRMCAS</h2>
             <p className="text-lg text-gray-600">
-              Founded in 1994, Prof. Ramkrishna More College has been a beacon of academic excellence in Pune. 
-              Our institution is committed to providing quality education that nurtures intellectual growth, 
-              fosters creativity, and builds character. With state-of-the-art facilities and dedicated faculty, 
+              Founded in 1994, Prof. Ramkrishna More College has been a beacon of academic excellence in Pune.
+              Our institution is committed to providing quality education that nurtures intellectual growth,
+              fosters creativity, and builds character. With state-of-the-art facilities and dedicated faculty,
               we prepare students for success in their chosen fields.
             </p>
           </div>
