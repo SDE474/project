@@ -13,15 +13,17 @@ import ResearchCentreMathematics from './components/Research/ResearchCentreMathe
 import ResearchCentrePhysics from './components/Research/ResearchCentrePhysics';
 import ResearchCentrePsychology from './components/Research/ResearchCentrePsychology';
 import ResearchPolicy from './components/Research/ResearchPolicy';
+import ResearchPublications from  './components/Research/Pages/ResearchPublications'
 
 function App() {
-  // Simple routing based on pathname
   const pathname = window.location.pathname;
 
   const renderContent = () => {
     switch (pathname) {
       case '/research/policy':
         return <ResearchPolicy />;
+      case '/research/publications':
+        return <ResearchPublications />;
       case '/research/centres/botany':
         return <ResearchCentreBotany />;
       case '/research/centres/chemistry':
@@ -57,5 +59,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
