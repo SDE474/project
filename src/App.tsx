@@ -59,3 +59,4 @@ function App() {
     </div>
   );
 }
+export default App; // <-- Ensure this line exists!
