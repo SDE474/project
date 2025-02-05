@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Search, Bot, ChevronDown } from 'lucide-react';
+import { Menu, Search, Bot, ChevronDown, ArrowRight } from 'lucide-react';
 import AuthModal from './AuthModal';
 import AIChatModal from './AIChatModal';
 
@@ -23,32 +23,32 @@ export default function Header() {
   const researchItems: DropdownItem[] = [
     { text: 'Research Policy', href: '/research/policy' },
     {
-      text: 'Research Centre',
+      text: 'Research Centres',
       href: '/research/centres',
       items: [
-        { text: 'Zoology', href: '/research/centres/zoology' },
-        { text: 'Botany', href: '/research/centres/botany' },
-        { text: 'Chemistry', href: '/research/centres/chemistry' },
-        { text: 'Commerce', href: '/research/centres/commerce' },
-        { text: 'Economics', href: '/research/centres/economics' },
-        { text: 'Geography', href: '/research/centres/geography' },
-        { text: 'English', href: '/research/centres/english' },
-        { text: 'Hindi', href: '/research/centres/hindi' },
-        { text: 'Physics', href: '/research/centres/physics' },
-        { text: 'Mathematics', href: '/research/centres/mathematics' },
-        { text: 'Psychology', href: '/research/centres/psychology' },
-        { text: 'Computer Science', href: '/research/centres/computer-science' }
+        { text: "Research Centre in Botany", href: "/research/Botany" },
+        { text: 'Research Centre in Zoology', href: '/research/centres/Zoology' },
+        { text: 'Research Centre in Chemistry', href: '/research/centres/chemistry' },
+        { text: 'Research Centre in Commerce', href: '/research/centres/commerce' },
+        { text: 'Research Centre in Economics', href: '/research/centres/economics' },
+        { text: 'Research Centre in Geography', href: '/research/centres/geography' },
+        { text: 'Research Centre in English', href: '/research/centres/english' },
+        { text: 'Research Centre in Hindi', href: '/research/centres/hindi' },
+        { text: 'Research Centre in Physics', href: '/research/centres/physics' },
+        { text: 'Research Centre in Mathematics', href: '/research/centres/mathematics' },
+        { text: 'Research Centre in Psychology', href: '/research/centres/psychology' },
+        { text: 'Research Centre in Computer Science', href: '/research/centres/computer-science' }
       ]
     },
     { text: 'Incubation Centre', href: '/research/incubation' },
-    { text: 'Funding Scheme', href: '/research/funding' },
+    { text: 'Funding Schemes', href: '/research/funding' },
     { text: 'Consultancy', href: '/research/consultancy' },
     {
       text: 'Projects',
       href: '/research/projects',
       items: [
-        { text: 'Major Projects', href: '/research/projects/major' },
-        { text: 'Minor Projects', href: '/research/projects/minor' }
+        { text: 'Major Research Projects', href: '/research/projects/major' },
+        { text: 'Minor Research Projects', href: '/research/projects/minor' }
       ]
     }
   ];
@@ -98,50 +98,26 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Hero Content */}
-      <div className="bg-[#9E1B32] text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl font-serif mb-6 tracking-wide">
-              Prof. Ramkrishna More College
-            </h1>
-            <p className="mt-6 max-w-2xl mx-auto text-xl font-light">
-              Empowering minds, shaping futures through excellence in education since 1994
-            </p>
-            <div className="mt-10 flex justify-center gap-x-6">
-              <a
-                href="#apply"
-                className="bg-white text-[#9E1B32] px-8 py-4 text-lg font-medium hover:bg-gray-100 transition-colors rounded"
-              >
-                Apply Now
-              </a>
-              <a
-                href="#tour"
-                className="border-2 border-white text-white px-8 py-4 text-lg font-medium hover:bg-white/10 transition-colors rounded flex items-center"
-              >
-                Virtual Tour
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation Links - After hero content */}
+      {/* Navigation Links */}
       <div className="bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="hidden lg:flex justify-center py-4">
             <div className="flex space-x-8">
               <NavLink href="#" text="About" />
               <NavLink href="#" text="Academics" />
-              <NavLink href="#" text="Admissions" />
+              <NavLink href="#" text="Department" />
               <NavDropdown
-                text="Research"
-                items={researchItems}
-                isActive={activeDropdown === 'research'}
-                onMouseEnter={() => setActiveDropdown('research')}
-                onMouseLeave={() => setActiveDropdown(null)}
-              />
+  text="Research"
+  items={researchItems}
+  isActive={activeDropdown === 'research'}
+  onMouseEnter={() => setActiveDropdown('research')}
+  onMouseLeave={() => {
+    // Add a delay of 500ms before hiding the dropdown (you can adjust this time)
+    setTimeout(() => {
+      setActiveDropdown(null);
+    }, 10000); // 500ms delay
+  }}
+/>
               <NavLink href="#" text="Campus Life" />
               <NavLink href="#" text="Athletics" />
               <NavLink href="#" text="Give" />
@@ -178,7 +154,7 @@ interface NavDropdownProps {
 function NavDropdown({ text, items, isActive, onMouseEnter, onMouseLeave }: NavDropdownProps) {
   return (
     <div
-      className="relative"
+      className="relative group"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
@@ -190,12 +166,12 @@ function NavDropdown({ text, items, isActive, onMouseEnter, onMouseLeave }: NavD
       {isActive && (
         <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
           {items.map((item, index) => (
-            <div key={index} className="relative group">
+            <div key={index} className="relative group/submenu">
               {item.items ? (
                 <div className="px-4 py-2 hover:bg-gray-50 flex items-center justify-between text-sm text-gray-700 hover:text-[#9E1B32] cursor-pointer">
                   {item.text}
                   <ChevronDown className="h-4 w-4 transform -rotate-90" />
-                  <div className="absolute left-full top-0 ml-2 w-64 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
+                  <div className="absolute left-full top-0 ml-2 w-72 bg-white rounded-lg shadow-lg py-2 hidden group-hover/submenu:block">
                     {item.items.map((subItem, subIndex) => (
                       <a
                         key={subIndex}

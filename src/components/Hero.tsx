@@ -4,7 +4,6 @@ import { ArrowRight, BookOpen, Award, Globe } from 'lucide-react';
 export default function Hero() {
   return (
     <>
-
       {/* Hero Content - Now at the top */}
       <div className="bg-[#9E1B32] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,21 +32,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-{/* Navigation Links - Now after hero content */}
-<div className="bg-white border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hidden lg:flex justify-center py-4">
-            <div className="flex space-x-8">
-              <NavLink href="#" text="About" />
-              <NavLink href="#" text="Academics" />
-              <NavLink href="#" text="Department" />
-              <NavLink href="#" text="Campus Life" />
-              <NavLink href="#" text="Athletics" />
-              <NavLink href="#" text="Give" />
-            </div>
-          </nav>
-        </div>
-      </div>
 
       {/* Video Section - Moved below hero content */}
       <div className="relative h-screen min-h-[600px] max-h-[800px]">
@@ -58,7 +42,7 @@ export default function Hero() {
           loop
           playsInline
         >
-          <source src="https://pdearmacs.edu.in/College+video+intro+6.0+FINAL.mp4" type="video/mp4" />
+          <source src="/College+video+intro+6.0+FINAL.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/40" />
