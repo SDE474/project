@@ -1,19 +1,18 @@
-import React from 'react';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Footer from './components/Footer';
-import ResearchPolicy from './components/Research/ResearchPolicy';
 import ResearchCentreBotany from './components/Research/ResearchCentreBotany';
 import ResearchCentreChemistry from './components/Research/ResearchCentreChemistry';
 import ResearchCentreCommerce from './components/Research/ResearchCentreCommerce';
-import ResearchCentreEconomics from './components/Research/ResearchCentreEconomics';
-import ResearchCentreGeography from './components/Research/ResearchCentreGeography';
-import ResearchCentreEnglish from './components/Research/ResearchCentreEnglish.tsx';
-import ResearchCentreHindi from './components/Research/ResearchCentreHindi';
-import ResearchCentrePhysics from './components/Research/ResearchCentrePhysics';
-import ResearchCentreMathematics from './components/Research/ResearchCentreMathematics';
-import ResearchCentrePsychology from './components/Research/ResearchCentrePsychology';
 import ResearchCentreComputerScience from './components/Research/ResearchCentreComputerScience';
+import ResearchCentreEconomics from './components/Research/ResearchCentreEconomics';
+import ResearchCentreEnglish from './components/Research/ResearchCentreEnglish.tsx';
+import ResearchCentreGeography from './components/Research/ResearchCentreGeography';
+import ResearchCentreHindi from './components/Research/ResearchCentreHindi';
+import ResearchCentreMathematics from './components/Research/ResearchCentreMathematics';
+import ResearchCentrePhysics from './components/Research/ResearchCentrePhysics';
+import ResearchCentrePsychology from './components/Research/ResearchCentrePsychology';
+import ResearchPolicy from './components/Research/ResearchPolicy';
 
 function App() {
   // Simple routing based on pathname
