@@ -4,7 +4,7 @@ import { ArrowRight, BookOpen, Award, Globe } from 'lucide-react';
 export default function Hero() {
   return (
     <>
-      {/* Hero Content - Now at the top */}
+      {/* Hero Content */}
       <div className="bg-[#9E1B32] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -29,11 +29,25 @@ export default function Hero() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </div>
+            <div className="mt-6 flex justify-center gap-x-6">
+              <a
+                href="/login"
+                className="bg-blue-600 text-white px-6 py-3 text-lg font-medium hover:bg-blue-700 transition-colors rounded"
+              >
+                Login
+              </a>
+              <a
+                href="/admin"
+                className="border-2 border-white text-white px-6 py-3 text-lg font-medium hover:bg-white/10 transition-colors rounded"
+              >
+                Admin Dashboard
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Video Section - Moved below hero content */}
+      {/* Video Section */}
       <div className="relative h-screen min-h-[600px] max-h-[800px]">
         <video
           className="absolute inset-0 w-full h-full object-cover"
@@ -54,9 +68,9 @@ export default function Hero() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-serif text-gray-900 mb-6">Welcome to PRMCAS</h2>
             <p className="text-lg text-gray-600">
-              Founded in 1994, Prof. Ramkrishna More College has been a beacon of academic excellence in Pune. 
-              Our institution is committed to providing quality education that nurtures intellectual growth, 
-              fosters creativity, and builds character. With state-of-the-art facilities and dedicated faculty, 
+              Founded in 1994, Prof. Ramkrishna More College has been a beacon of academic excellence in Pune.
+              Our institution is committed to providing quality education that nurtures intellectual growth,
+              fosters creativity, and builds character. With state-of-the-art facilities and dedicated faculty,
               we prepare students for success in their chosen fields.
             </p>
           </div>
@@ -130,16 +144,10 @@ export default function Hero() {
             Take the first step towards a bright future. Apply now or schedule a campus tour to learn more about our programs.
           </p>
           <div className="flex justify-center gap-x-6">
-            <a
-              href="#apply"
-              className="bg-white text-[#9E1B32] px-8 py-4 text-lg font-medium hover:bg-gray-100 transition-colors rounded"
-            >
+            <a href="#apply" className="bg-white text-[#9E1B32] px-8 py-4 text-lg font-medium hover:bg-gray-100 transition-colors rounded">
               Apply Now
             </a>
-            <a
-              href="#tour"
-              className="border-2 border-white text-white px-8 py-4 text-lg font-medium hover:bg-white/10 transition-colors rounded"
-            >
+            <a href="#tour" className="border-2 border-white text-white px-8 py-4 text-lg font-medium hover:bg-white/10 transition-colors rounded">
               Schedule a Tour
             </a>
           </div>
@@ -155,24 +163,5 @@ function StatCard({ number, label }: { number: string; label: string }) {
       <div className="text-4xl font-bold text-[#9E1B32] mb-2">{number}</div>
       <div className="text-gray-600">{label}</div>
     </div>
-  );
-}
-
-function ProgramCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
-  return (
-    <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-      <div className="text-[#9E1B32] mb-4 flex justify-center">{icon}</div>
-      <h3 className="text-xl font-serif text-gray-900 mb-3 text-center">{title}</h3>
-      <p className="text-gray-600 text-center">{description}</p>
-    </div>
-  );
-}
-
-function Feature({ text }: { text: string }) {
-  return (
-    <li className="flex items-start">
-      <ArrowRight className="h-5 w-5 text-[#9E1B32] mr-2 mt-1 flex-shrink-0" />
-      <span className="text-gray-700">{text}</span>
-    </li>
   );
 }
