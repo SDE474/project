@@ -26,8 +26,8 @@ export default function Header() {
       text: 'Research Centres',
       href: '/research/centres',
       items: [
-        { text: "Research Centre in Botany", href: "/research/Botany" },
-        { text: 'Research Centre in Zoology', href: '/research/centres/Zoology' },
+        { text: "Research Centre in Zoology", href: "/research/centre/Zoology" },
+        { text: 'Research Centre in Botany', href: '/research/centres/Botany' },
         { text: 'Research Centre in Chemistry', href: '/research/centres/chemistry' },
         { text: 'Research Centre in Commerce', href: '/research/centres/commerce' },
         { text: 'Research Centre in Economics', href: '/research/centres/economics' },
@@ -115,7 +115,7 @@ export default function Header() {
     // Add a delay of 500ms before hiding the dropdown (you can adjust this time)
     setTimeout(() => {
       setActiveDropdown(null);
-    }, 10000); // 500ms delay
+    }, 100000); // 100000ms delay
   }}
 />
               <NavLink href="#" text="Campus Life" />

@@ -42,7 +42,7 @@ export default function Hero() {
           loop
           playsInline
         >
-          <source src="/College+video+intro+6.0+FINAL.mp4" type="video/mp4" />
+          <source src="https://pdearmacs.edu.in/College+video+intro+6.0+FINAL.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/40" />
