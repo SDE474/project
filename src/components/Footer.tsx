@@ -1,11 +1,13 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import CampusLife from './components/CampusLife'; // ✅ Correct import without ".tsx" extension
 
 export default function Footer() {
   return (
     <footer className="bg-[#1A1A1A] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
           {/* Contact Information */}
           <div>
             <h3 className="text-2xl font-serif mb-6">Contact Us</h3>
@@ -33,7 +35,6 @@ export default function Footer() {
               <li><a href="#" className="hover:text-[#9E1B32] transition-colors">Department</a></li>
               <li><a href="#" className="hover:text-[#9E1B32] transition-colors">Academics</a></li>
               <li><a href="#" className="hover:text-[#9E1B32] transition-colors">Research</a></li>
-              <li><a href="#" className="hover:text-[#9E1B32] transition-colors">Campus Life</a></li>
             </ul>
           </div>
 
@@ -47,6 +48,11 @@ export default function Footer() {
               <li><a href="#" className="hover:text-[#9E1B32] transition-colors">Faculty Portal</a></li>
               <li><a href="#" className="hover:text-[#9E1B32] transition-colors">Alumni</a></li>
             </ul>
+          </div>
+
+          {/* Campus Life */}
+          <div>
+            <CampusLife />
           </div>
 
           {/* Connect */}

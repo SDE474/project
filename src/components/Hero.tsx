@@ -1,5 +1,14 @@
 import React from 'react';
 import { ArrowRight, BookOpen, Award, Globe } from 'lucide-react';
+function NavLink({ href, text }: { href: string; text: string }) {
+  return (
+    <a href={href} className="text-gray-700 hover:text-[#9E1B32] transition-colors font-medium">
+      {text}
+    </a>
+  );
+}
+
+
 
 export default function Hero() {
   return (
@@ -29,6 +38,7 @@ export default function Hero() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </div>
+
             <div className="mt-6 flex justify-center gap-x-6">
               <a
                 href="/login"
@@ -42,6 +52,22 @@ export default function Hero() {
               >
                 Admin Dashboard
               </a>
+
+          </div>
+        </div>
+      </div>
+      {/* Navigation Links - Now after hero content */}
+      <div className="bg-white border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav className="hidden lg:flex justify-center py-4">
+            <div className="flex space-x-8">
+              <NavLink href="#" text="About" />
+              <NavLink href="#" text="Academics" />
+              <NavLink href="#" text="Department" />
+              <NavLink href="#" text="Campus Life" />
+              <NavLink href="#" text="Athletics" />
+              <NavLink href="#" text="Give" />
+
             </div>
           </div>
         </div>
